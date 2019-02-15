@@ -19,23 +19,22 @@
 @implementation NotificationService
 
 - (void)didReceiveNotificationRequest:(UNNotificationRequest *)request withContentHandler:(void (^)(UNNotificationContent * _Nonnull))contentHandler {
+    
     self.contentHandler = contentHandler;
     self.bestAttemptContent = [request.content mutableCopy];
     
     // Get the User Info Dictionary.
-    NSMutableDictionary* userInfo = [self.bestAttemptContent.userInfo mutableCopy];
-    NSMutableDictionary* aps = [[userInfo objectForKey:@"aps"] mutableCopy];
-    [aps setObject:@"coindrop.caf" forKey:@"sound"];
-   // [aps setObject:@"" forKey:@"sound"];
-    [userInfo setObject:aps forKey:@"aps"];
-  //  self.bestAttemptContent.userInfo = userInfo;
+    NSString *dateStr = self.bestAttemptContent.userInfo[@"aps"][@"date"];
+    
+    
+    
     
     // Modify the notification content here...
-    self.bestAttemptContent.title = [NSString stringWithFormat:@"Title Set by Extension"];
-    self.bestAttemptContent.sound = [UNNotificationSound soundNamed:@"coindrop.caf"] ;
+    self.bestAttemptContent.title = @"Warning";
+    self.bestAttemptContent.body = dateStr;// @"Danger ahead";
+    self.bestAttemptContent.sound = [UNNotificationSound soundNamed:@"coindrop.wav"] ;
     self.contentHandler(self.bestAttemptContent);
     
-   
    
 }
 

@@ -17,10 +17,7 @@
 		FC09188321E85BB60076F807 /* SampleAudio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FC09188221E85BB60076F807 /* SampleAudio.mp3 */; };
 		FCC8F6F221F07836009C98B6 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC8F6F121F07836009C98B6 /* NotificationService.m */; };
 		FCC8F6F621F07836009C98B6 /* NotificationExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FCC8F6EE21F07836009C98B6 /* NotificationExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		FCC8F6FC21F086B2009C98B6 /* coindrop.wav in Resources */ = {isa = PBXBuildFile; fileRef = FCC8F6FB21F086B2009C98B6 /* coindrop.wav */; };
 		FCC8F6FE21F08815009C98B6 /* coindrop.wav in Resources */ = {isa = PBXBuildFile; fileRef = FCC8F6FD21F08815009C98B6 /* coindrop.wav */; };
-		FCC8F70021F08C4C009C98B6 /* coindrop.caf in Resources */ = {isa = PBXBuildFile; fileRef = FCC8F6FF21F08C08009C98B6 /* coindrop.caf */; };
-		FCC8F70121F094FE009C98B6 /* coindrop.caf in Resources */ = {isa = PBXBuildFile; fileRef = FCC8F6FF21F08C08009C98B6 /* coindrop.caf */; };
 		FCC8F70221F09501009C98B6 /* coindrop.wav in Resources */ = {isa = PBXBuildFile; fileRef = FCC8F6FD21F08815009C98B6 /* coindrop.wav */; };
 		FCC8F70321F095AB009C98B6 /* NotificationService.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC8F6F121F07836009C98B6 /* NotificationService.m */; };
 /* End PBXBuildFile section */
@@ -67,9 +64,7 @@
 		FCC8F6F021F07836009C98B6 /* NotificationService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationService.h; sourceTree = "<group>"; };
 		FCC8F6F121F07836009C98B6 /* NotificationService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationService.m; sourceTree = "<group>"; };
 		FCC8F6F321F07836009C98B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCC8F6FB21F086B2009C98B6 /* coindrop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coindrop.wav; sourceTree = "<group>"; };
 		FCC8F6FD21F08815009C98B6 /* coindrop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = coindrop.wav; sourceTree = "<group>"; };
-		FCC8F6FF21F08C08009C98B6 /* coindrop.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = coindrop.caf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +107,6 @@
 			isa = PBXGroup;
 			children = (
 				FC09188221E85BB60076F807 /* SampleAudio.mp3 */,
-				FCC8F6FB21F086B2009C98B6 /* coindrop.wav */,
-				FCC8F6FF21F08C08009C98B6 /* coindrop.caf */,
 				FC09188121E83F8A0076F807 /* SilentPush.entitlements */,
 				FC09186821E832210076F807 /* AppDelegate.h */,
 				FC09186921E832210076F807 /* AppDelegate.m */,
@@ -228,8 +221,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCC8F70021F08C4C009C98B6 /* coindrop.caf in Resources */,
-				FCC8F6FC21F086B2009C98B6 /* coindrop.wav in Resources */,
 				FC09187821E832240076F807 /* LaunchScreen.storyboard in Resources */,
 				FC09188321E85BB60076F807 /* SampleAudio.mp3 in Resources */,
 				FC09187521E832240076F807 /* Assets.xcassets in Resources */,
@@ -242,7 +233,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCC8F70121F094FE009C98B6 /* coindrop.caf in Resources */,
 				FCC8F6FE21F08815009C98B6 /* coindrop.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -115,34 +115,34 @@
     
     NSLog(@"didReceiveRemoteNotification:fetchCompletionHandler: %@", userInfo);
     
-    if([[userInfo allKeys] containsObject:@"message"]) {
-        
-        //fire local notification with custom tune
-        UNMutableNotificationContent *objNotificationContent = [[UNMutableNotificationContent alloc] init];
-        objNotificationContent.title = [NSString stringWithFormat:@"Notification!"];
-        objNotificationContent.body = [NSString localizedUserNotificationStringForKey:@"Playing your custom tune" arguments:nil];
-        objNotificationContent.sound = [UNNotificationSound soundNamed:@"SampleAudio.mp3"];
-        
-        // 4. update application icon badge number
-        objNotificationContent.badge = @([[UIApplication sharedApplication] applicationIconBadgeNumber] + 1);
-        
-        // Deliver the notification now.
-        UNTimeIntervalNotificationTrigger *trigger =  [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1.f repeats:NO];
-        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"silent" content:objNotificationContent trigger:trigger];
-        
-        // 3. schedule localNotification
-        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
-        [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
-            
-            completionHandler(UIBackgroundFetchResultNoData);
-            
-            if (!error) {
-                NSLog(@"Local Notification succeeded");
-            } else {
-                NSLog(@"Local Notification failed");
-            }
-        }];
-    }
+//    if([[userInfo allKeys] containsObject:@"message"]) {
+//        
+//        //fire local notification with custom tune
+//        UNMutableNotificationContent *objNotificationContent = [[UNMutableNotificationContent alloc] init];
+//        objNotificationContent.title = [NSString stringWithFormat:@"Notification!"];
+//        objNotificationContent.body = [NSString localizedUserNotificationStringForKey:@"Playing your custom tune" arguments:nil];
+//        objNotificationContent.sound = [UNNotificationSound soundNamed:@"SampleAudio.mp3"];
+//        
+//        // 4. update application icon badge number
+//        objNotificationContent.badge = @([[UIApplication sharedApplication] applicationIconBadgeNumber] + 1);
+//        
+//        // Deliver the notification now.
+//        UNTimeIntervalNotificationTrigger *trigger =  [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:1.f repeats:NO];
+//        UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"silent" content:objNotificationContent trigger:trigger];
+//        
+//        // 3. schedule localNotification
+//        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+//        [center addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+//            
+//            completionHandler(UIBackgroundFetchResultNoData);
+//            
+//            if (!error) {
+//                NSLog(@"Local Notification succeeded");
+//            } else {
+//                NSLog(@"Local Notification failed");
+//            }
+//        }];
+//    }
 }
 
 
